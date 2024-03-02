@@ -5,7 +5,8 @@
     <title>Tutorial of Thymeleaf</title>
 </head>
 <body>
-    <h1>Thymeleaf Page</h1>
+        <h1 th:text="#{content.title}">Thymeleafkadai</h1>
+    <h2>出力画面</h2>
     <p th:text="'入力された値は「' + ${val} + '」です。'"></p>
     <p><a th:href="@{http://localhost:8080/input(previous=${val})}">入力画面へ戻る</a></p>
 </body>
