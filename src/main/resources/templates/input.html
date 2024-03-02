@@ -8,7 +8,7 @@
         <h1 th:text="#{content.title}">Thymeleafkadai</h1>
     <h2>入力画面</h2>
      <p th:if="${previous}" th:text="'前回入力された値は「' + ${previous} + '」でした。'">th:if</p>
-
+     <p>値を入力してください。</p>
     <form method="post" action="/output">
         <input type="text" name="val">
         <button type="submit">送信</button>
