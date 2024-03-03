@@ -5,13 +5,13 @@
     <title>Tutorial of Thymeleaf</title>
 </head>
 <body>
-        <h1 th:text="#{content.title}">Thymeleafkadai</h1>
-    <h2>入力画面</h2>
+        <h1 th:text="#{content.title}">Thymeleaf課題</h1>
+    <h2 th:text="#{content.subtitle}">入力画面</h2>
      <p th:if="${previous}" th:text="'前回入力された値は「' + ${previous} + '」でした。'">th:if</p>
-     <p>値を入力してください。</p>
+     <p th:text="#{content.message3}">値を入力してください。</p>
     <form method="post" action="/output">
         <input type="text" name="val">
-        <button type="submit">送信</button>
+        <button type="submit"><span th:text="#{content.message2}">送信</span></button>
     </form>
 </body>
 </html>
